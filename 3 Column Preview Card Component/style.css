@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+*{
+    font-family: 'Lexend Deca', sans-serif;
+    box-sizing: border-box;
+    font-size: 15px ;
+}
+
+.parent{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10%;
+    margin-bottom: 20px;
+}
+h2{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+p{
+    padding-bottom: 80px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.con{
+    padding: 65px 50px;
+}
+.container .card{color:white}
+.container .card a{
+    color:#e28525;
+    background-color: white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    text-decoration: none;
+    padding:10px;
+}
+.container .card:nth-child(2) a{
+    color:#016972;
+}
+.container .card:last-child a{
+    color:#00403f;
+}
+.container .card a:hover{
+    color:white;
+    background-color:transparent;
+    border: 1px solid white
+}
+
+.container .card:first-child{
+    background-color: #e28525;
+    border-top-left-radius: 3%;
+    border-bottom-left-radius: 3%;
+}
+.container .card:nth-child(2){
+    background-color:#016972;
+}
+.container .card:last-child{
+    background-color: #00403f;
+    border-top-right-radius: 3%;
+    border-bottom-right-radius: 3%;
+}
+@media(max-width:992px){
+
+    .container .card:first-child{
+        border-top-left-radius: 3%;
+        border-bottom-left-radius: 0;
+    }
+    .container .card:nth-child(2){
+        border-top-right-radius: 3%;
+        border-bottom-right-radius: 3%;
+    }
+    .container .card:last-child{
+        border-bottom-right-radius: 3%;
+    }
+}
+@media(max-width:768px){
+
+    .container .card:first-child{
+        border-top-left-radius: 3%;
+        border-top-right-radius: 3%;
+    }
+    .container .card:nth-child(2){
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .container .card:last-child{
+        border-bottom-right-radius: 3%;
+        border-bottom-left-radius: 3%;
+        border-top-right-radius: 0;
+    }
+}
